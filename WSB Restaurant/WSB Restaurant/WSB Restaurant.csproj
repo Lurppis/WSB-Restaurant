@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BoxesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoxesUserControl.Designer.cs">
+      <DependentUpon>BoxesUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BoxesUserControl.resx">
+      <DependentUpon>BoxesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +99,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="assets\imgs\Boxes\dq_product_assets_chix_strips_test1.png" />
+    <Content Include="assets\imgs\Boxes\product-tender.png" />
+    <Content Include="assets\imgs\Boxes\wendys-chicken-nuggets-promo_0.png" />
     <Content Include="assets\imgs\nav\Boxes ico 64.png" />
     <Content Include="assets\imgs\nav\fries ico 64.png" />
     <Content Include="assets\imgs\nav\hamburger Ico 64.png" />

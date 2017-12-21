@@ -7,15 +7,21 @@ namespace WSB_Restaurant
         public Form1()
         {
             InitializeComponent();
-            SidePanel.Height = bntHome.Height;
+            SidePanel.Location = bntHome.Location;
             honeUserControl1.BringToFront();
 
         }
 
         private void bntHome_Click(object sender, System.EventArgs e)
         {
-            SidePanel.Height = bntHome.Height;
+            SidePanel.Location = bntHome.Location;
             honeUserControl1.BringToFront();
+        }
+
+        private void btnBoxes_Click(object sender, System.EventArgs e)
+        {
+            SidePanel.Location = btnBoxes.Location;
+            boxesUserControl1.BringToFront();
         }
     }
 }
