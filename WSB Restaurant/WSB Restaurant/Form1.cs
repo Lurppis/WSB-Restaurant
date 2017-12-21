@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace WSB_Restaurant
 {
@@ -15,6 +7,15 @@ namespace WSB_Restaurant
         public Form1()
         {
             InitializeComponent();
+            SidePanel.Height = bntHome.Height;
+            honeUserControl1.BringToFront();
+
+        }
+
+        private void bntHome_Click(object sender, System.EventArgs e)
+        {
+            SidePanel.Height = bntHome.Height;
+            honeUserControl1.BringToFront();
         }
     }
 }

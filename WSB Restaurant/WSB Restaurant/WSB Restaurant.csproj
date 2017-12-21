@@ -51,10 +51,19 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HoneUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HoneUserControl.Designer.cs">
+      <DependentUpon>HoneUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoneUserControl.resx">
+      <DependentUpon>HoneUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -88,8 +97,8 @@
     <Content Include="assets\imgs\nav\ice-cream 64.png" />
     <Content Include="assets\imgs\nav\ice-cream ico 64.png" />
     <Content Include="assets\imgs\nav\plastic-cup ico 64.png" />
+    <Content Include="assets\imgs\nav\receipt ico 64.png" />
     <Content Include="assets\imgs\scooter.png" />
-    <Content Include="assets\imgs\social\facebook-logo-in-circular-button-outlined-social-symbol.png" />
     <Content Include="assets\imgs\social\facebook.png" />
     <Content Include="assets\imgs\social\twitter.png" />
   </ItemGroup>
