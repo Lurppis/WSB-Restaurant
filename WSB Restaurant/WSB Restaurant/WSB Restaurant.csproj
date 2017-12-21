@@ -57,6 +57,12 @@
     <Compile Include="Control\BurgerUserControl.Designer.cs">
       <DependentUpon>BurgerUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\frenchFriesUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\frenchFriesUserControl.Designer.cs">
+      <DependentUpon>frenchFriesUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\BurgerUserControl.resx">
       <DependentUpon>BurgerUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\frenchFriesUserControl.resx">
+      <DependentUpon>frenchFriesUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

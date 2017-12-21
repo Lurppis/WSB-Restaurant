@@ -29,5 +29,11 @@ namespace WSB_Restaurant
             SidePanel.Location = btnBurgers.Location;
             burgerUserControl1.BringToFront();
         }
+
+        private void btnFries_Click(object sender, System.EventArgs e)
+        {
+            SidePanel.Location = btnFries.Location;
+            frenchFriesUserControl1.BringToFront();
+        }
     }
 }

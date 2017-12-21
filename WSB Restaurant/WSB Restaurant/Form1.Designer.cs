@@ -30,6 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SidePanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
+            this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
+            this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnPayment = new System.Windows.Forms.Button();
             this.btnIceCreams = new System.Windows.Forms.Button();
             this.btnDrinks = new System.Windows.Forms.Button();
@@ -37,17 +48,7 @@
             this.btnBurgers = new System.Windows.Forms.Button();
             this.btnBoxes = new System.Windows.Forms.Button();
             this.bntHome = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.SidePanel = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
-            this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
+            this.frenchFriesUserControl1 = new WSB_Restaurant.Control.frenchFriesUserControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -68,6 +69,115 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 748);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(617, 33);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(229, 1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(152, 150);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(138, 32);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "MC Danald";
+            // 
+            // SidePanel
+            // 
+            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
+            this.SidePanel.Location = new System.Drawing.Point(0, 143);
+            this.SidePanel.Name = "SidePanel";
+            this.SidePanel.Size = new System.Drawing.Size(10, 79);
+            this.SidePanel.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(384, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(305, 22);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "The fastest fast food restaurant in the world!";
+            // 
+            // burgerUserControl1
+            // 
+            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.burgerUserControl1.Location = new System.Drawing.Point(200, 151);
+            this.burgerUserControl1.Name = "burgerUserControl1";
+            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.burgerUserControl1.TabIndex = 9;
+            // 
+            // boxesUserControl1
+            // 
+            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.boxesUserControl1.Name = "boxesUserControl1";
+            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.boxesUserControl1.TabIndex = 12;
+            // 
+            // honeUserControl1
+            // 
+            this.honeUserControl1.Location = new System.Drawing.Point(200, 151);
+            this.honeUserControl1.Name = "honeUserControl1";
+            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.honeUserControl1.TabIndex = 11;
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(722, 34);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(30, 35);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "v";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(695, 33);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(30, 35);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "v";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(146, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // btnPayment
             // 
@@ -114,6 +224,7 @@
             this.btnFries.TabIndex = 5;
             this.btnFries.Text = "\r\n";
             this.btnFries.UseVisualStyleBackColor = true;
+            this.btnFries.Click += new System.EventHandler(this.btnFries_Click);
             // 
             // btnBurgers
             // 
@@ -154,120 +265,20 @@
             this.bntHome.UseVisualStyleBackColor = true;
             this.bntHome.Click += new System.EventHandler(this.bntHome_Click);
             // 
-            // panel2
+            // frenchFriesUserControl1
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(617, 33);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(229, 1);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(152, 150);
-            this.panel3.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "MC Danald";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(146, 88);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
-            // SidePanel
-            // 
-            this.SidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(8)))), ((int)(((byte)(55)))));
-            this.SidePanel.Location = new System.Drawing.Point(0, 143);
-            this.SidePanel.Name = "SidePanel";
-            this.SidePanel.Size = new System.Drawing.Size(10, 79);
-            this.SidePanel.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(384, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 22);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "The fastest fast food restaurant in the world!";
-            // 
-            // honeUserControl1
-            // 
-            this.honeUserControl1.Location = new System.Drawing.Point(200, 151);
-            this.honeUserControl1.Name = "honeUserControl1";
-            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.honeUserControl1.TabIndex = 11;
-            // 
-            // button8
-            // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(722, 34);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 35);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "v";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(695, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 35);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "v";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // boxesUserControl1
-            // 
-            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
-            this.boxesUserControl1.Name = "boxesUserControl1";
-            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.boxesUserControl1.TabIndex = 12;
-            // 
-            // burgerUserControl1
-            // 
-            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.burgerUserControl1.Location = new System.Drawing.Point(200, 151);
-            this.burgerUserControl1.Name = "burgerUserControl1";
-            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.burgerUserControl1.TabIndex = 9;
+            this.frenchFriesUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.frenchFriesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.frenchFriesUserControl1.Name = "frenchFriesUserControl1";
+            this.frenchFriesUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.frenchFriesUserControl1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 748);
+            this.Controls.Add(this.frenchFriesUserControl1);
             this.Controls.Add(this.burgerUserControl1);
             this.Controls.Add(this.boxesUserControl1);
             this.Controls.Add(this.honeUserControl1);
@@ -312,6 +323,7 @@
         private HomeUserControl honeUserControl1;
         private BoxesUserControl boxesUserControl1;
         private BurgerUserControl burgerUserControl1;
+        private Control.frenchFriesUserControl frenchFriesUserControl1;
     }
 }
 
