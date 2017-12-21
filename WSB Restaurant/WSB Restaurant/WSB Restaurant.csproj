@@ -57,11 +57,23 @@
     <Compile Include="Control\BurgerUserControl.Designer.cs">
       <DependentUpon>BurgerUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control\DrinksUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\DrinksUserControl1.Designer.cs">
+      <DependentUpon>DrinksUserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\frenchFriesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\frenchFriesUserControl.Designer.cs">
       <DependentUpon>frenchFriesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\IceCreamUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\IceCreamUserControl.Designer.cs">
+      <DependentUpon>IceCreamUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -83,8 +95,14 @@
     <EmbeddedResource Include="Control\BurgerUserControl.resx">
       <DependentUpon>BurgerUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\DrinksUserControl1.resx">
+      <DependentUpon>DrinksUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\frenchFriesUserControl.resx">
       <DependentUpon>frenchFriesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\IceCreamUserControl.resx">
+      <DependentUpon>IceCreamUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

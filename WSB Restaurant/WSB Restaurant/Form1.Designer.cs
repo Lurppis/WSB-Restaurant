@@ -35,9 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
-            this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
-            this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
             this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +45,12 @@
             this.btnBurgers = new System.Windows.Forms.Button();
             this.btnBoxes = new System.Windows.Forms.Button();
             this.bntHome = new System.Windows.Forms.Button();
+            this.drinksUserControl11 = new WSB_Restaurant.Control.DrinksUserControl1();
             this.frenchFriesUserControl1 = new WSB_Restaurant.Control.frenchFriesUserControl();
+            this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
+            this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
+            this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
+            this.iceCreamUserControl1 = new WSB_Restaurant.Control.IceCreamUserControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -113,35 +115,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(384, 39);
+            this.label2.Location = new System.Drawing.Point(384, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(305, 22);
             this.label2.TabIndex = 4;
             this.label2.Text = "The fastest fast food restaurant in the world!";
-            // 
-            // burgerUserControl1
-            // 
-            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.burgerUserControl1.Location = new System.Drawing.Point(200, 151);
-            this.burgerUserControl1.Name = "burgerUserControl1";
-            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.burgerUserControl1.TabIndex = 9;
-            // 
-            // boxesUserControl1
-            // 
-            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
-            this.boxesUserControl1.Name = "boxesUserControl1";
-            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.boxesUserControl1.TabIndex = 12;
-            // 
-            // honeUserControl1
-            // 
-            this.honeUserControl1.Location = new System.Drawing.Point(200, 151);
-            this.honeUserControl1.Name = "honeUserControl1";
-            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.honeUserControl1.TabIndex = 11;
             // 
             // button8
             // 
@@ -149,7 +127,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.Color.Black;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(722, 34);
+            this.button8.Location = new System.Drawing.Point(742, 42);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 35);
             this.button8.TabIndex = 10;
@@ -162,7 +140,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(695, 33);
+            this.button1.Location = new System.Drawing.Point(706, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(30, 35);
             this.button1.TabIndex = 9;
@@ -200,6 +178,7 @@
             this.btnIceCreams.Size = new System.Drawing.Size(194, 78);
             this.btnIceCreams.TabIndex = 7;
             this.btnIceCreams.UseVisualStyleBackColor = true;
+            this.btnIceCreams.Click += new System.EventHandler(this.btnIceCreams_Click);
             // 
             // btnDrinks
             // 
@@ -211,6 +190,7 @@
             this.btnDrinks.Size = new System.Drawing.Size(194, 78);
             this.btnDrinks.TabIndex = 6;
             this.btnDrinks.UseVisualStyleBackColor = true;
+            this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
             // 
             // btnFries
             // 
@@ -265,6 +245,14 @@
             this.bntHome.UseVisualStyleBackColor = true;
             this.bntHome.Click += new System.EventHandler(this.bntHome_Click);
             // 
+            // drinksUserControl11
+            // 
+            this.drinksUserControl11.ForeColor = System.Drawing.Color.Black;
+            this.drinksUserControl11.Location = new System.Drawing.Point(200, 154);
+            this.drinksUserControl11.Name = "drinksUserControl11";
+            this.drinksUserControl11.Size = new System.Drawing.Size(617, 594);
+            this.drinksUserControl11.TabIndex = 9;
+            // 
             // frenchFriesUserControl1
             // 
             this.frenchFriesUserControl1.ForeColor = System.Drawing.Color.Black;
@@ -273,11 +261,45 @@
             this.frenchFriesUserControl1.Size = new System.Drawing.Size(617, 594);
             this.frenchFriesUserControl1.TabIndex = 9;
             // 
+            // burgerUserControl1
+            // 
+            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.burgerUserControl1.Location = new System.Drawing.Point(200, 151);
+            this.burgerUserControl1.Name = "burgerUserControl1";
+            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.burgerUserControl1.TabIndex = 9;
+            // 
+            // boxesUserControl1
+            // 
+            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.boxesUserControl1.Name = "boxesUserControl1";
+            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.boxesUserControl1.TabIndex = 12;
+            // 
+            // honeUserControl1
+            // 
+            this.honeUserControl1.Location = new System.Drawing.Point(200, 151);
+            this.honeUserControl1.Name = "honeUserControl1";
+            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.honeUserControl1.TabIndex = 11;
+            // 
+            // iceCreamUserControl1
+            // 
+            this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.iceCreamUserControl1.Location = new System.Drawing.Point(200, 161);
+            this.iceCreamUserControl1.Name = "iceCreamUserControl1";
+            this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
+            this.iceCreamUserControl1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 748);
+            this.Controls.Add(this.iceCreamUserControl1);
+            this.Controls.Add(this.drinksUserControl11);
             this.Controls.Add(this.frenchFriesUserControl1);
             this.Controls.Add(this.burgerUserControl1);
             this.Controls.Add(this.boxesUserControl1);
@@ -324,6 +346,8 @@
         private BoxesUserControl boxesUserControl1;
         private BurgerUserControl burgerUserControl1;
         private Control.frenchFriesUserControl frenchFriesUserControl1;
+        private Control.DrinksUserControl1 drinksUserControl11;
+        private Control.IceCreamUserControl iceCreamUserControl1;
     }
 }
 
