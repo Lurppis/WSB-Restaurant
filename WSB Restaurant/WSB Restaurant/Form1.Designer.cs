@@ -43,10 +43,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.honeUserControl1 = new WSB_Restaurant.HoneUserControl();
+            this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
             this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
+            this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -125,6 +126,7 @@
             this.btnBurgers.Size = new System.Drawing.Size(194, 78);
             this.btnBurgers.TabIndex = 5;
             this.btnBurgers.UseVisualStyleBackColor = true;
+            this.btnBurgers.Click += new System.EventHandler(this.btnBurgers_Click);
             // 
             // btnBoxes
             // 
@@ -253,11 +255,20 @@
             this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
             this.boxesUserControl1.TabIndex = 12;
             // 
+            // burgerUserControl1
+            // 
+            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.burgerUserControl1.Location = new System.Drawing.Point(200, 151);
+            this.burgerUserControl1.Name = "burgerUserControl1";
+            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.burgerUserControl1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 748);
+            this.Controls.Add(this.burgerUserControl1);
             this.Controls.Add(this.boxesUserControl1);
             this.Controls.Add(this.honeUserControl1);
             this.Controls.Add(this.button8);
@@ -298,8 +309,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button8;
-        private HoneUserControl honeUserControl1;
+        private HomeUserControl honeUserControl1;
         private BoxesUserControl boxesUserControl1;
+        private BurgerUserControl burgerUserControl1;
     }
 }
 

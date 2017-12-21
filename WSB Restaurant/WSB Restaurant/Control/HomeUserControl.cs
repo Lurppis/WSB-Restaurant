@@ -2,9 +2,9 @@
 
 namespace WSB_Restaurant
 {
-    public partial class HoneUserControl : UserControl
+    public partial class HomeUserControl : UserControl
     {
-        public HoneUserControl()
+        public HomeUserControl()
         {
             InitializeComponent();
         }

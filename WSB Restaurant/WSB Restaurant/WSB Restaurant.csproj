@@ -45,11 +45,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BoxesUserControl.cs">
+    <Compile Include="Control\BoxesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="BoxesUserControl.Designer.cs">
+    <Compile Include="Control\BoxesUserControl.Designer.cs">
       <DependentUpon>BoxesUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\BurgerUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BurgerUserControl.Designer.cs">
+      <DependentUpon>BurgerUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -57,22 +63,25 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HoneUserControl.cs">
+    <Compile Include="Control\HomeUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HoneUserControl.Designer.cs">
-      <DependentUpon>HoneUserControl.cs</DependentUpon>
+    <Compile Include="Control\HomeUserControl.Designer.cs">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BoxesUserControl.resx">
+    <EmbeddedResource Include="Control\BoxesUserControl.resx">
       <DependentUpon>BoxesUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\BurgerUserControl.resx">
+      <DependentUpon>BurgerUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HoneUserControl.resx">
-      <DependentUpon>HoneUserControl.cs</DependentUpon>
+    <EmbeddedResource Include="Control\HomeUserControl.resx">
+      <DependentUpon>HomeUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +111,9 @@
     <Content Include="assets\imgs\Boxes\dq_product_assets_chix_strips_test1.png" />
     <Content Include="assets\imgs\Boxes\product-tender.png" />
     <Content Include="assets\imgs\Boxes\wendys-chicken-nuggets-promo_0.png" />
+    <Content Include="assets\imgs\Burgers\Burger-PNG.png" />
+    <Content Include="assets\imgs\Burgers\img_55e65939b75ea.png" />
+    <Content Include="assets\imgs\Burgers\junk-food-png-transparent-images--png-all-15.png" />
     <Content Include="assets\imgs\nav\Boxes ico 64.png" />
     <Content Include="assets\imgs\nav\fries ico 64.png" />
     <Content Include="assets\imgs\nav\hamburger Ico 64.png" />
