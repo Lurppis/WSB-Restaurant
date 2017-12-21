@@ -63,9 +63,9 @@ namespace WSB_Restaurant.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Home_icon_black {
+        internal static System.Drawing.Bitmap Boxes_ico_64 {
             get {
-                object obj = ResourceManager.GetObject("Home_icon_black", resourceCulture);
+                object obj = ResourceManager.GetObject("Boxes ico 64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -58,18 +58,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -81,8 +81,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="assets\imgs\nav\Home_icon_black.png" />
+    <Content Include="assets\imgs\nav\Boxes ico 64.png" />
+    <Content Include="assets\imgs\nav\fries ico 64.png" />
+    <Content Include="assets\imgs\nav\hamburger Ico 64.png" />
+    <Content Include="assets\imgs\nav\Home Ico 64.png" />
+    <Content Include="assets\imgs\nav\ice-cream 64.png" />
+    <Content Include="assets\imgs\nav\ice-cream ico 64.png" />
+    <Content Include="assets\imgs\nav\plastic-cup ico 64.png" />
     <Content Include="assets\imgs\scooter.png" />
+    <Content Include="assets\imgs\social\facebook-logo-in-circular-button-outlined-social-symbol.png" />
+    <Content Include="assets\imgs\social\facebook.png" />
+    <Content Include="assets\imgs\social\twitter.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
