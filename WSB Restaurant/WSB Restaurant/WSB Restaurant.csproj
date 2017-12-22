@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="assets\enums.cs" />
     <Compile Include="Control\BoxesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,8 +88,20 @@
     <Compile Include="Control\HomeUserControl.Designer.cs">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Box.cs" />
+    <Compile Include="Model\Burger.cs" />
+    <Compile Include="Model\Drink.cs" />
+    <Compile Include="Model\Fries.cs" />
+    <Compile Include="Model\IceCream.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Control\PurchaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PurchaseUserControl.Designer.cs">
+      <DependentUpon>PurchaseUserControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Control\BoxesUserControl.resx">
       <DependentUpon>BoxesUserControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +117,9 @@
     <EmbeddedResource Include="Control\IceCreamUserControl.resx">
       <DependentUpon>IceCreamUserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\PurchaseUserControl.resx">
+      <DependentUpon>PurchaseUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +131,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\WSB_Restaurant.Model.Product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,6 +158,14 @@
     <Content Include="assets\imgs\Burgers\Burger-PNG.png" />
     <Content Include="assets\imgs\Burgers\img_55e65939b75ea.png" />
     <Content Include="assets\imgs\Burgers\junk-food-png-transparent-images--png-all-15.png" />
+    <Content Include="assets\imgs\drinks\coke.png" />
+    <Content Include="assets\imgs\drinks\Fuze_Hero_Pdt_oct15.png" />
+    <Content Include="assets\imgs\drinks\hero_pdt_sprite_zero_17.png" />
+    <Content Include="assets\imgs\drinks\t-mcdonalds-Fanta-orange.png" />
+    <Content Include="assets\imgs\Fries\French-Frie Larges.png" />
+    <Content Include="assets\imgs\Ice cream\4251a6_6515b7a08f2649929e6fb7cee28ebdbd~mv2.png" />
+    <Content Include="assets\imgs\Ice cream\McFlurry-Chocolate-Crunch.png" />
+    <Content Include="assets\imgs\Ice cream\t-mcdonalds-Fanta-orange.png" />
     <Content Include="assets\imgs\nav\Boxes ico 64.png" />
     <Content Include="assets\imgs\nav\fries ico 64.png" />
     <Content Include="assets\imgs\nav\hamburger Ico 64.png" />

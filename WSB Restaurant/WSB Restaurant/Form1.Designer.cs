@@ -45,12 +45,13 @@
             this.btnBurgers = new System.Windows.Forms.Button();
             this.btnBoxes = new System.Windows.Forms.Button();
             this.bntHome = new System.Windows.Forms.Button();
+            this.iceCreamUserControl1 = new WSB_Restaurant.Control.IceCreamUserControl();
             this.drinksUserControl11 = new WSB_Restaurant.Control.DrinksUserControl1();
             this.frenchFriesUserControl1 = new WSB_Restaurant.Control.frenchFriesUserControl();
             this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
             this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
             this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
-            this.iceCreamUserControl1 = new WSB_Restaurant.Control.IceCreamUserControl();
+            this.purchaseUserControl1 = new WSB_Restaurant.PurchaseUserControl();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -167,6 +168,7 @@
             this.btnPayment.Size = new System.Drawing.Size(194, 78);
             this.btnPayment.TabIndex = 8;
             this.btnPayment.UseVisualStyleBackColor = true;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // btnIceCreams
             // 
@@ -245,6 +247,14 @@
             this.bntHome.UseVisualStyleBackColor = true;
             this.bntHome.Click += new System.EventHandler(this.bntHome_Click);
             // 
+            // iceCreamUserControl1
+            // 
+            this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.iceCreamUserControl1.Location = new System.Drawing.Point(200, 161);
+            this.iceCreamUserControl1.Name = "iceCreamUserControl1";
+            this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
+            this.iceCreamUserControl1.TabIndex = 9;
+            // 
             // drinksUserControl11
             // 
             this.drinksUserControl11.ForeColor = System.Drawing.Color.Black;
@@ -285,19 +295,19 @@
             this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
             this.honeUserControl1.TabIndex = 11;
             // 
-            // iceCreamUserControl1
+            // purchaseUserControl1
             // 
-            this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.iceCreamUserControl1.Location = new System.Drawing.Point(200, 161);
-            this.iceCreamUserControl1.Name = "iceCreamUserControl1";
-            this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
-            this.iceCreamUserControl1.TabIndex = 9;
+            this.purchaseUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.purchaseUserControl1.Name = "purchaseUserControl1";
+            this.purchaseUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.purchaseUserControl1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 748);
+            this.Controls.Add(this.purchaseUserControl1);
             this.Controls.Add(this.iceCreamUserControl1);
             this.Controls.Add(this.drinksUserControl11);
             this.Controls.Add(this.frenchFriesUserControl1);
@@ -348,6 +358,7 @@
         private Control.frenchFriesUserControl frenchFriesUserControl1;
         private Control.DrinksUserControl1 drinksUserControl11;
         private Control.IceCreamUserControl iceCreamUserControl1;
+        private PurchaseUserControl purchaseUserControl1;
     }
 }
 

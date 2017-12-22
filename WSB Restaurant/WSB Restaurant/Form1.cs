@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using WSB_Restaurant.Model;
 
 namespace WSB_Restaurant
 {
@@ -46,6 +47,12 @@ namespace WSB_Restaurant
         {
             SidePanel.Location = btnIceCreams.Location;
             iceCreamUserControl1.BringToFront();
+        }
+
+        private void btnPayment_Click(object sender, System.EventArgs e)
+        {
+            SidePanel.Location = btnPayment.Location;
+            purchaseUserControl1.BringToFront();
         }
     }
 }
