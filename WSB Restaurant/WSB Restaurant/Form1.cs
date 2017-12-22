@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
 
@@ -97,7 +98,14 @@ namespace WSB_Restaurant
             boxesUserControl1.Hide();
             burgerUserControl1.Hide();
 
-            // Dummy data
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Black;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
+
+            dataGridView1.RowHeadersDefaultCellStyle.SelectionBackColor = Color.Empty;
+
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.LightGray;
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGray;
+
             var bindingList = new BindingList<Product>(bucket.Products);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;

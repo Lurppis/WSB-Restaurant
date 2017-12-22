@@ -9,9 +9,9 @@ namespace WSB_Restaurant.Model
         public Bucket()
         {
             Products = new List<Product>();
-            Products.Add(new Product("Burger", "bnt", "Burger sypa", 2));
-            Products.Add(new Product("Burger2", "bnt", "Burger sypa", 2));
-            Products.Add(new Product("Burger3", "bnt", "Burger sypa", 5));
+            Products.Add(new Product("Burger", "bnt", "Burger sypa", 2, 3.99m));
+            Products.Add(new Product("Burger2", "bnt", "Burger sypa", 2, 3.00m));
+            Products.Add(new Product("Burger3", "bnt", "Burger sypa", 5, 4.00m));
         }
     }
 }

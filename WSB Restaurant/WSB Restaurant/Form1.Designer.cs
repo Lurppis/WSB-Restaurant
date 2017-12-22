@@ -253,7 +253,7 @@
             // iceCreamUserControl1
             // 
             this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.iceCreamUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.iceCreamUserControl1.Location = new System.Drawing.Point(742, 208);
             this.iceCreamUserControl1.Name = "iceCreamUserControl1";
             this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
             this.iceCreamUserControl1.TabIndex = 9;
@@ -261,7 +261,7 @@
             // drinksUserControl11
             // 
             this.drinksUserControl11.ForeColor = System.Drawing.Color.Black;
-            this.drinksUserControl11.Location = new System.Drawing.Point(200, 154);
+            this.drinksUserControl11.Location = new System.Drawing.Point(751, 186);
             this.drinksUserControl11.Name = "drinksUserControl11";
             this.drinksUserControl11.Size = new System.Drawing.Size(617, 594);
             this.drinksUserControl11.TabIndex = 9;
@@ -269,7 +269,7 @@
             // frenchFriesUserControl1
             // 
             this.frenchFriesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.frenchFriesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.frenchFriesUserControl1.Location = new System.Drawing.Point(764, 186);
             this.frenchFriesUserControl1.Name = "frenchFriesUserControl1";
             this.frenchFriesUserControl1.Size = new System.Drawing.Size(617, 594);
             this.frenchFriesUserControl1.TabIndex = 9;
@@ -277,7 +277,7 @@
             // burgerUserControl1
             // 
             this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.burgerUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.burgerUserControl1.Location = new System.Drawing.Point(774, 163);
             this.burgerUserControl1.Name = "burgerUserControl1";
             this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
             this.burgerUserControl1.TabIndex = 9;
@@ -286,25 +286,30 @@
             // 
             this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
             this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.boxesUserControl1.Location = new System.Drawing.Point(733, 163);
             this.boxesUserControl1.Name = "boxesUserControl1";
             this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
             this.boxesUserControl1.TabIndex = 12;
             // 
             // honeUserControl1
             // 
-            this.honeUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.honeUserControl1.Location = new System.Drawing.Point(733, 186);
             this.honeUserControl1.Name = "honeUserControl1";
             this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
             this.honeUserControl1.TabIndex = 11;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(229, 227);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(555, 442);
             this.dataGridView1.TabIndex = 13;
             // 
@@ -391,9 +396,9 @@
         private Control.frenchFriesUserControl frenchFriesUserControl1;
         private Control.DrinksUserControl1 drinksUserControl11;
         private Control.IceCreamUserControl iceCreamUserControl1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
