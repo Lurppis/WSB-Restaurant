@@ -20,6 +20,17 @@ private void bntHome_Click(object sender, System.EventArgs e)
     honeUserControl1.BringToFront();
 }
  ```
+ 
+ > Increment amount of product:
+
+``` C#
+private void bntUp_Click(object sender, System.EventArgs e)
+{
+    var number = int.Parse(this.AmountLabel.Text);
+    number++;
+    this.AmountLabel.Text = number.ToString();
+}
+ ```
 
 ## Installation
 
