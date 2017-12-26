@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
@@ -16,7 +15,7 @@ namespace WSB_Restaurant
             honeUserControl1.BringToFront();
         }
 
-        private void bntHome_Click(object sender, System.EventArgs e)
+        private void BntHome_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = bntHome.Location;
             honeUserControl1.BringToFront();
@@ -28,7 +27,7 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
-        private void btnBoxes_Click(object sender, System.EventArgs e)
+        private void BtnBoxes_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnBoxes.Location;
             boxesUserControl1.BringToFront();
@@ -40,7 +39,7 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
-        private void btnBurgers_Click(object sender, System.EventArgs e)
+        private void BtnBurgers_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnBurgers.Location;
             burgerUserControl1.BringToFront();
@@ -52,7 +51,7 @@ namespace WSB_Restaurant
             burgerUserControl1.Show();
         }
 
-        private void btnFries_Click(object sender, System.EventArgs e)
+        private void BtnFries_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnFries.Location;
             frenchFriesUserControl1.BringToFront();
@@ -64,7 +63,7 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
-        private void btnDrinks_Click(object sender, System.EventArgs e)
+        private void BtnDrinks_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnDrinks.Location;
             drinksUserControl11.BringToFront();
@@ -76,7 +75,7 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
-        private void btnIceCreams_Click(object sender, System.EventArgs e)
+        private void BtnIceCreams_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnIceCreams.Location;
             honeUserControl1.Hide();
@@ -88,7 +87,7 @@ namespace WSB_Restaurant
             iceCreamUserControl1.BringToFront();
         }
 
-        private void btnPayment_Click(object sender, System.EventArgs e)
+        private void BtnPayment_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnPayment.Location;
             honeUserControl1.Hide();
@@ -111,7 +110,7 @@ namespace WSB_Restaurant
             dataGridView1.DataSource = source;
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
+        private void Button2_Click(object sender, System.EventArgs e)
         {
             Bucket.Products.Clear();
             var bindingList = new BindingList<Product>(Bucket.Products);

@@ -17,7 +17,7 @@ namespace WSB_Restaurant
             this.product = (Product)product;
         }
 
-        private void btnUp_Click(object sender, EventArgs e)
+        private void BtnUp_Click(object sender, EventArgs e)
         {
             int number = int.Parse(this.AmountLabel.Text);
             number++;
@@ -32,13 +32,13 @@ namespace WSB_Restaurant
             this.AmountLabel.Text = number.ToString();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
             Close();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         { 
             this.DialogResult = DialogResult.OK;
             product.Count = int.Parse(this.AmountLabel.Text);

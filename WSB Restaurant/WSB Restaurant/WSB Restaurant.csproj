@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddToBucketWithExtra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddToBucketWithExtra.Designer.cs">
+      <DependentUpon>AddToBucketWithExtra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\BoxesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddToBucketWithExtra.resx">
+      <DependentUpon>AddToBucketWithExtra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\BoxesUserControl.resx">
       <DependentUpon>BoxesUserControl.cs</DependentUpon>
     </EmbeddedResource>

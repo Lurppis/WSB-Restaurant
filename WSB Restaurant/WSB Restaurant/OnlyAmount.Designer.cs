@@ -39,10 +39,10 @@
             // AmountLabel
             // 
             this.AmountLabel.AutoSize = true;
-            this.AmountLabel.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AmountLabel.Font = new System.Drawing.Font("Palatino Linotype", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AmountLabel.Location = new System.Drawing.Point(192, 96);
             this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(23, 28);
+            this.AmountLabel.Size = new System.Drawing.Size(27, 32);
             this.AmountLabel.TabIndex = 2;
             this.AmountLabel.Text = "1";
             // 
@@ -54,7 +54,7 @@
             this.button3.TabIndex = 3;
             this.button3.Text = "Ok";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -64,7 +64,7 @@
             this.button4.TabIndex = 4;
             this.button4.Text = "Cancle";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // btnUp
             // 
@@ -75,7 +75,7 @@
             this.btnUp.Size = new System.Drawing.Size(75, 40);
             this.btnUp.TabIndex = 5;
             this.btnUp.UseVisualStyleBackColor = true;
-            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            this.btnUp.Click += new System.EventHandler(this.BtnUp_Click);
             // 
             // btnDown
             // 

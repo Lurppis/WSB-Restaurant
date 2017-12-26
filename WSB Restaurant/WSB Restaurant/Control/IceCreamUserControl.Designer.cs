@@ -103,6 +103,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Add to cart";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label5
             // 
@@ -160,6 +161,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Add to cart";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // label8
             // 
@@ -217,6 +219,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Add to cart";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label2
             // 

@@ -6,7 +6,7 @@
         public string Name { get; set; }
         public string Description { get; set; }
         public int Count { get; set; }
-        private decimal Price { get; set; }
+        public decimal Price { get; set; }
         public decimal TotalPrice { get { return Price * Count; }}
 
         public Product(string name, string image, string description, int count, decimal price)

@@ -86,7 +86,7 @@
             this.btnPayment.Size = new System.Drawing.Size(194, 78);
             this.btnPayment.TabIndex = 8;
             this.btnPayment.UseVisualStyleBackColor = true;
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            this.btnPayment.Click += new System.EventHandler(this.BtnPayment_Click);
             // 
             // btnIceCreams
             // 
@@ -98,7 +98,7 @@
             this.btnIceCreams.Size = new System.Drawing.Size(194, 78);
             this.btnIceCreams.TabIndex = 7;
             this.btnIceCreams.UseVisualStyleBackColor = true;
-            this.btnIceCreams.Click += new System.EventHandler(this.btnIceCreams_Click);
+            this.btnIceCreams.Click += new System.EventHandler(this.BtnIceCreams_Click);
             // 
             // btnDrinks
             // 
@@ -110,7 +110,7 @@
             this.btnDrinks.Size = new System.Drawing.Size(194, 78);
             this.btnDrinks.TabIndex = 6;
             this.btnDrinks.UseVisualStyleBackColor = true;
-            this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
+            this.btnDrinks.Click += new System.EventHandler(this.BtnDrinks_Click);
             // 
             // btnFries
             // 
@@ -124,7 +124,7 @@
             this.btnFries.TabIndex = 5;
             this.btnFries.Text = "\r\n";
             this.btnFries.UseVisualStyleBackColor = true;
-            this.btnFries.Click += new System.EventHandler(this.btnFries_Click);
+            this.btnFries.Click += new System.EventHandler(this.BtnFries_Click);
             // 
             // btnBurgers
             // 
@@ -137,7 +137,7 @@
             this.btnBurgers.Size = new System.Drawing.Size(194, 78);
             this.btnBurgers.TabIndex = 5;
             this.btnBurgers.UseVisualStyleBackColor = true;
-            this.btnBurgers.Click += new System.EventHandler(this.btnBurgers_Click);
+            this.btnBurgers.Click += new System.EventHandler(this.BtnBurgers_Click);
             // 
             // btnBoxes
             // 
@@ -150,7 +150,7 @@
             this.btnBoxes.Size = new System.Drawing.Size(194, 78);
             this.btnBoxes.TabIndex = 4;
             this.btnBoxes.UseVisualStyleBackColor = true;
-            this.btnBoxes.Click += new System.EventHandler(this.btnBoxes_Click);
+            this.btnBoxes.Click += new System.EventHandler(this.BtnBoxes_Click);
             // 
             // bntHome
             // 
@@ -163,7 +163,7 @@
             this.bntHome.Size = new System.Drawing.Size(194, 78);
             this.bntHome.TabIndex = 3;
             this.bntHome.UseVisualStyleBackColor = true;
-            this.bntHome.Click += new System.EventHandler(this.bntHome_Click);
+            this.bntHome.Click += new System.EventHandler(this.BntHome_Click);
             // 
             // panel2
             // 
@@ -288,7 +288,7 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Cancle order";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // frenchFriesUserControl1
             // 
