@@ -45,15 +45,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.iceCreamUserControl1 = new WSB_Restaurant.Control.IceCreamUserControl();
-            this.drinksUserControl11 = new WSB_Restaurant.Control.DrinksUserControl1();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.frenchFriesUserControl1 = new WSB_Restaurant.Control.frenchFriesUserControl();
             this.burgerUserControl1 = new WSB_Restaurant.BurgerUserControl();
             this.boxesUserControl1 = new WSB_Restaurant.BoxesUserControl();
             this.honeUserControl1 = new WSB_Restaurant.HomeUserControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.iceCreamUserControl1 = new WSB_Restaurant.Control.IceCreamUserControl();
+            this.drinksUserControl11 = new WSB_Restaurant.Control.DrinksUserControl1();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,54 +250,6 @@
             this.button1.Text = "v";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // iceCreamUserControl1
-            // 
-            this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.iceCreamUserControl1.Location = new System.Drawing.Point(742, 208);
-            this.iceCreamUserControl1.Name = "iceCreamUserControl1";
-            this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
-            this.iceCreamUserControl1.TabIndex = 9;
-            // 
-            // drinksUserControl11
-            // 
-            this.drinksUserControl11.ForeColor = System.Drawing.Color.Black;
-            this.drinksUserControl11.Location = new System.Drawing.Point(751, 186);
-            this.drinksUserControl11.Name = "drinksUserControl11";
-            this.drinksUserControl11.Size = new System.Drawing.Size(617, 594);
-            this.drinksUserControl11.TabIndex = 9;
-            // 
-            // frenchFriesUserControl1
-            // 
-            this.frenchFriesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.frenchFriesUserControl1.Location = new System.Drawing.Point(764, 186);
-            this.frenchFriesUserControl1.Name = "frenchFriesUserControl1";
-            this.frenchFriesUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.frenchFriesUserControl1.TabIndex = 9;
-            // 
-            // burgerUserControl1
-            // 
-            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.burgerUserControl1.Location = new System.Drawing.Point(774, 163);
-            this.burgerUserControl1.Name = "burgerUserControl1";
-            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.burgerUserControl1.TabIndex = 9;
-            // 
-            // boxesUserControl1
-            // 
-            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
-            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
-            this.boxesUserControl1.Location = new System.Drawing.Point(733, 163);
-            this.boxesUserControl1.Name = "boxesUserControl1";
-            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.boxesUserControl1.TabIndex = 12;
-            // 
-            // honeUserControl1
-            // 
-            this.honeUserControl1.Location = new System.Drawing.Point(733, 186);
-            this.honeUserControl1.Name = "honeUserControl1";
-            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
-            this.honeUserControl1.TabIndex = 11;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -336,6 +288,55 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Cancle order";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // frenchFriesUserControl1
+            // 
+            this.frenchFriesUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.frenchFriesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.frenchFriesUserControl1.Name = "frenchFriesUserControl1";
+            this.frenchFriesUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.frenchFriesUserControl1.TabIndex = 9;
+            // 
+            // burgerUserControl1
+            // 
+            this.burgerUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.burgerUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.burgerUserControl1.Name = "burgerUserControl1";
+            this.burgerUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.burgerUserControl1.TabIndex = 9;
+            // 
+            // boxesUserControl1
+            // 
+            this.boxesUserControl1.BackColor = System.Drawing.SystemColors.Control;
+            this.boxesUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.boxesUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.boxesUserControl1.Name = "boxesUserControl1";
+            this.boxesUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.boxesUserControl1.TabIndex = 12;
+            // 
+            // honeUserControl1
+            // 
+            this.honeUserControl1.Location = new System.Drawing.Point(200, 154);
+            this.honeUserControl1.Name = "honeUserControl1";
+            this.honeUserControl1.Size = new System.Drawing.Size(617, 594);
+            this.honeUserControl1.TabIndex = 11;
+            // 
+            // iceCreamUserControl1
+            // 
+            this.iceCreamUserControl1.ForeColor = System.Drawing.Color.Black;
+            this.iceCreamUserControl1.Location = new System.Drawing.Point(200, 161);
+            this.iceCreamUserControl1.Name = "iceCreamUserControl1";
+            this.iceCreamUserControl1.Size = new System.Drawing.Size(617, 584);
+            this.iceCreamUserControl1.TabIndex = 9;
+            // 
+            // drinksUserControl11
+            // 
+            this.drinksUserControl11.ForeColor = System.Drawing.Color.Black;
+            this.drinksUserControl11.Location = new System.Drawing.Point(200, 154);
+            this.drinksUserControl11.Name = "drinksUserControl11";
+            this.drinksUserControl11.Size = new System.Drawing.Size(617, 594);
+            this.drinksUserControl11.TabIndex = 9;
             // 
             // Form1
             // 
@@ -349,15 +350,15 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.frenchFriesUserControl1);
             this.Controls.Add(this.burgerUserControl1);
             this.Controls.Add(this.boxesUserControl1);
             this.Controls.Add(this.honeUserControl1);
             this.Controls.Add(this.iceCreamUserControl1);
             this.Controls.Add(this.drinksUserControl11);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";

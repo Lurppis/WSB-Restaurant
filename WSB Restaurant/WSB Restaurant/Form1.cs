@@ -106,7 +106,15 @@ namespace WSB_Restaurant
             dataGridView1.RowsDefaultCellStyle.BackColor = Color.LightGray;
             dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.DarkGray;
 
-            var bindingList = new BindingList<Product>(bucket.Products);
+            var bindingList = new BindingList<Product>(Bucket.Products);
+            var source = new BindingSource(bindingList, null);
+            dataGridView1.DataSource = source;
+        }
+
+        private void button2_Click(object sender, System.EventArgs e)
+        {
+            Bucket.Products.Clear();
+            var bindingList = new BindingList<Product>(Bucket.Products);
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
         }

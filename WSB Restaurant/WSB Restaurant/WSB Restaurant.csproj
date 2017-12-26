@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="assets\enums.cs" />
     <Compile Include="Control\BoxesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +94,12 @@
     <Compile Include="Model\Fries.cs" />
     <Compile Include="Model\IceCream.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="OnlyAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OnlyAmount.Designer.cs">
+      <DependentUpon>OnlyAmount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Control\BoxesUserControl.resx">
@@ -117,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\HomeUserControl.resx">
       <DependentUpon>HomeUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OnlyAmount.resx">
+      <DependentUpon>OnlyAmount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,6 +157,7 @@
     <Content Include="assets\imgs\Burgers\Burger-PNG.png" />
     <Content Include="assets\imgs\Burgers\img_55e65939b75ea.png" />
     <Content Include="assets\imgs\Burgers\junk-food-png-transparent-images--png-all-15.png" />
+    <Content Include="assets\imgs\buttons\down-arrow.png" />
     <Content Include="assets\imgs\drinks\coke.png" />
     <Content Include="assets\imgs\drinks\Fuze_Hero_Pdt_oct15.png" />
     <Content Include="assets\imgs\drinks\hero_pdt_sprite_zero_17.png" />

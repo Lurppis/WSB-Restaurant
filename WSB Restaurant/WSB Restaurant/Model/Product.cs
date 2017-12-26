@@ -1,6 +1,6 @@
 ﻿namespace WSB_Restaurant.Model
 {
-    class Product
+    abstract class Product
     {
         public string Image { get; set; }
         public string Name { get; set; }
