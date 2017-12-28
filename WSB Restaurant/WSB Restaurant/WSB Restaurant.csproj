@@ -54,6 +54,12 @@
     <Compile Include="AddToBucketWithExtra.Designer.cs">
       <DependentUpon>AddToBucketWithExtra.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientType.Designer.cs">
+      <DependentUpon>ClientType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\BoxesUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,7 @@
     <Compile Include="Model\Drink.cs" />
     <Compile Include="Model\Fries.cs" />
     <Compile Include="Model\IceCream.cs" />
+    <Compile Include="Model\OrderDetails.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="OnlyAmount.cs">
       <SubType>Form</SubType>
@@ -113,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddToBucketWithExtra.resx">
       <DependentUpon>AddToBucketWithExtra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientType.resx">
+      <DependentUpon>ClientType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\BoxesUserControl.resx">
       <DependentUpon>BoxesUserControl.cs</DependentUpon>

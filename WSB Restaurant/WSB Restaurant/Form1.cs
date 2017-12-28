@@ -7,7 +7,6 @@ using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
-using System.Linq;
 
 namespace WSB_Restaurant
 {
@@ -125,7 +124,7 @@ namespace WSB_Restaurant
             dataGridView1.DataSource = source;
         }
 
-        private void button3_Click(object sender, System.EventArgs e)
+        private void Button3_Click(object sender, System.EventArgs e)
         {
             int attempts = 0;
             while (!_clientSocket.Connected)
@@ -150,10 +149,6 @@ namespace WSB_Restaurant
 
         private void Send()
         {
-            Bucket.Type = "Car";
-            var JSONBucketList = JsonConvert.SerializeObject(Bucket.Products);
-            var JsonClientType = JsonConvert.SerializeObject(Bucket.Type);
-
             var result = JsonConvert.SerializeObject(new
             {
                 ClientType = Bucket.Type,
@@ -168,15 +163,17 @@ namespace WSB_Restaurant
 
             byte[] data = new byte[rec];
             Array.Copy(recivedBuf, data, rec);
-            Console.WriteLine("Recived: " + Encoding.ASCII.GetString(data));
-            var answer = Convert.ToBoolean(Encoding.ASCII.GetString(data));
-            if (answer == true)
+            var answer = Encoding.ASCII.GetString(data);
+
+            var dataRecived = OrderDetails.FromJson(Encoding.ASCII.GetString(data));
+
+            if (dataRecived.Response == true)
             {
                 SidePanel.Location = bntHome.Location;
                 honeUserControl1.Show();
                 honeUserControl1.BringToFront();
                 Bucket.Products.Clear();
-                MessageBox.Show("THX. Your number is XXX");
+                MessageBox.Show("Your order number is " + dataRecived.Number);
             }
 
             else

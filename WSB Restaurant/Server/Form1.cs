@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Server.Model;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -10,6 +11,8 @@ namespace Server
 {
     public partial class Form1 : Form
     {
+        private List<Order> ListOfOrders = new List<Order>();
+
         private static byte[] _buffer = new byte[1024];
         private static List<Socket> _clientSockets = new List<Socket>();
         private static Socket _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -24,7 +27,7 @@ namespace Server
         {
             Console.WriteLine("Setting up server..");
             _serverSocket.Bind(new IPEndPoint(IPAddress.Any, 100));
-            _serverSocket.Listen(1);
+            _serverSocket.Listen(10);
             _serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
         }
 
@@ -37,37 +40,43 @@ namespace Server
             _serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
         }
 
-        private static void ReciveCallback(IAsyncResult ar)
+        private void ReciveCallback(IAsyncResult ar)
         {
+            var response = "";
             Socket socket = (Socket)ar.AsyncState;
             int recived = socket.EndReceive(ar);
             byte[] dataBuff = new byte[recived];
             Array.Copy(_buffer, dataBuff, recived);
 
             var result = Encoding.ASCII.GetString(dataBuff);
-            Console.WriteLine("Text recived: " + result);
 
-            dynamic jsonObj = JsonConvert.DeserializeObject(result);
-            foreach (var item in jsonObj.ListOfProducts)
+            if (result != string.Empty)
             {
-                Console.WriteLine(item.Name);
-            }
+                var order = Order.FromJson(result);
+                Random rnd = new Random();
+                order.ID = rnd.Next(0, 100);
 
-            var response = false;
-            var response2 = "";
+                ListOfOrders.Add(order);
 
-            if(result != string.Empty)
-            {
-                response = true;
+                var JsonResult = JsonConvert.SerializeObject(true);
+                var JsonClientType = JsonConvert.SerializeObject(order.ID);
 
-                //Add order number.
+                response = JsonConvert.SerializeObject(new
+                {
+                    order.ID,
+                    Response = true
+                }, Formatting.None);
             }
             else
             {
-                response = false;
+                response = JsonConvert.SerializeObject(new
+                {     
+                    ID = -99,
+                    Response = false
+                }, Formatting.None);
             }
 
-            byte[] date = Encoding.ASCII.GetBytes(response.ToString());
+            byte[] date = Encoding.ASCII.GetBytes(response);
             socket.BeginSend(date, 0, date.Length, SocketFlags.None, new AsyncCallback(SendCallback), socket);
             socket.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, new AsyncCallback(ReciveCallback), socket);
         }
