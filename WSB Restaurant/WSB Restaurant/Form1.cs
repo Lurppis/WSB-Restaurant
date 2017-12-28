@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
 
@@ -132,9 +134,8 @@ namespace WSB_Restaurant
                     attempts++;
                     _clientSocket.Connect(IPAddress.Loopback, 100);
                 }
-                catch (SocketException ex)
+                catch (SocketException)
                 {
-                    //MessageBox.Show("Something goes wrong conntact to personel");
                     Console.WriteLine(attempts);
                 }
                 catch(Exception exception)
@@ -143,8 +144,36 @@ namespace WSB_Restaurant
                 }
             }
             Console.WriteLine("Connected");
+            Send();
         }
 
-        
+        private void Send()
+        {
+            var JSONData = JsonConvert.SerializeObject(Bucket.Products);
+            byte[] buffer = Encoding.ASCII.GetBytes(JSONData);
+            _clientSocket.Send(buffer);
+
+            byte[] recivedBuf = new byte[1024];
+            int rec = _clientSocket.Receive(recivedBuf);
+
+            byte[] data = new byte[rec];
+            Array.Copy(recivedBuf, data, rec);
+            Console.WriteLine("Recived: " + Encoding.ASCII.GetString(data));
+            var answer = Convert.ToBoolean(Encoding.ASCII.GetString(data));
+            if (answer == true)
+            {
+                //_clientSocket.Close();
+                SidePanel.Location = bntHome.Location;
+                honeUserControl1.Show();
+                honeUserControl1.BringToFront();
+                Bucket.Products.Clear();
+                MessageBox.Show("THX. Your number is XXX");
+            }
+
+            else
+            {
+                MessageBox.Show("We were not able to send your request");
+            }
+        }
     }
 }

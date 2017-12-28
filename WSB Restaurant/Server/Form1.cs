@@ -43,20 +43,22 @@ namespace Server
             byte[] dataBuff = new byte[recived];
             Array.Copy(_buffer, dataBuff, recived);
 
-            string text = Encoding.ASCII.GetString(dataBuff);
+            var text = Encoding.ASCII.GetString(dataBuff);
             Console.WriteLine("Text recived: " + text);
-            string response = string.Empty;
+            var response = false;
 
-            if(text.ToLower() != "get time")
+            if(text != string.Empty)
             {
-                response = "Invalid request";
+                response = true;
+
+                //Add order number.
             }
             else
             {
-                response = DateTime.Now.ToLongTimeString();
+                response = false;
             }
 
-            byte[] date = Encoding.ASCII.GetBytes(DateTime.Now.ToLongTimeString());
+            byte[] date = Encoding.ASCII.GetBytes(response.ToString());
             socket.BeginSend(date, 0, date.Length, SocketFlags.None, new AsyncCallback(SendCallback), socket);
             socket.BeginReceive(_buffer, 0, _buffer.Length, SocketFlags.None, new AsyncCallback(ReciveCallback), socket);
         }
