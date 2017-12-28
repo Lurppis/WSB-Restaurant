@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -43,11 +44,19 @@ namespace Server
             byte[] dataBuff = new byte[recived];
             Array.Copy(_buffer, dataBuff, recived);
 
-            var text = Encoding.ASCII.GetString(dataBuff);
-            Console.WriteLine("Text recived: " + text);
-            var response = false;
+            var result = Encoding.ASCII.GetString(dataBuff);
+            Console.WriteLine("Text recived: " + result);
 
-            if(text != string.Empty)
+            dynamic jsonObj = JsonConvert.DeserializeObject(result);
+            foreach (var item in jsonObj.ListOfProducts)
+            {
+                Console.WriteLine(item.Name);
+            }
+
+            var response = false;
+            var response2 = "";
+
+            if(result != string.Empty)
             {
                 response = true;
 

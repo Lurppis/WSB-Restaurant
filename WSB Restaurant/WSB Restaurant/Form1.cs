@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
+using System.Linq;
 
 namespace WSB_Restaurant
 {
@@ -149,8 +150,17 @@ namespace WSB_Restaurant
 
         private void Send()
         {
-            var JSONData = JsonConvert.SerializeObject(Bucket.Products);
-            byte[] buffer = Encoding.ASCII.GetBytes(JSONData);
+            Bucket.Type = "Car";
+            var JSONBucketList = JsonConvert.SerializeObject(Bucket.Products);
+            var JsonClientType = JsonConvert.SerializeObject(Bucket.Type);
+
+            var result = JsonConvert.SerializeObject(new
+            {
+                ClientType = Bucket.Type,
+                ListOfProducts = Bucket.Products
+            }, Formatting.None);
+
+            byte[] buffer = Encoding.ASCII.GetBytes(result);
             _clientSocket.Send(buffer);
 
             byte[] recivedBuf = new byte[1024];
@@ -162,7 +172,6 @@ namespace WSB_Restaurant
             var answer = Convert.ToBoolean(Encoding.ASCII.GetString(data));
             if (answer == true)
             {
-                //_clientSocket.Close();
                 SidePanel.Location = bntHome.Location;
                 honeUserControl1.Show();
                 honeUserControl1.BringToFront();
