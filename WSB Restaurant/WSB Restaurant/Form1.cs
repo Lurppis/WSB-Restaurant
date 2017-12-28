@@ -1,5 +1,8 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Drawing;
+using System.Net;
+using System.Net.Sockets;
 using System.Windows.Forms;
 using WSB_Restaurant.Model;
 
@@ -8,6 +11,7 @@ namespace WSB_Restaurant
     public partial class Form1 : Form
     {
         Bucket bucket = new Bucket();
+        private static Socket _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         public Form1()
         {
             InitializeComponent();
@@ -117,5 +121,30 @@ namespace WSB_Restaurant
             var source = new BindingSource(bindingList, null);
             dataGridView1.DataSource = source;
         }
+
+        private void button3_Click(object sender, System.EventArgs e)
+        {
+            int attempts = 0;
+            while (!_clientSocket.Connected)
+            {
+                try
+                {
+                    attempts++;
+                    _clientSocket.Connect(IPAddress.Loopback, 100);
+                }
+                catch (SocketException ex)
+                {
+                    //MessageBox.Show("Something goes wrong conntact to personel");
+                    Console.WriteLine(attempts);
+                }
+                catch(Exception exception)
+                {
+                    MessageBox.Show(exception.ToString());
+                }
+            }
+            Console.WriteLine("Connected");
+        }
+
+        
     }
 }
