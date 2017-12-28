@@ -57,6 +57,10 @@ namespace Server
                 order.ID = rnd.Next(0, 100);
 
                 ListOfOrders.Add(order);
+                ProductUserControl puc = new ProductUserControl();
+                puc.Update("MAMA", "DEC", 3);
+                //flowLayoutPanel.Controls.Add(puc);
+                flowLayoutPanel.Invoke(new Action(() => flowLayoutPanel.Controls.Add(puc)));
 
                 var JsonResult = JsonConvert.SerializeObject(true);
                 var JsonClientType = JsonConvert.SerializeObject(order.ID);
