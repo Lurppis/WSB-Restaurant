@@ -8,6 +8,7 @@ namespace WSB_Restaurant
     {
         private Product product;
         private decimal price = 1;
+        private string type;
 
         public AddToBucketWithExtra()
         {
@@ -53,6 +54,7 @@ namespace WSB_Restaurant
             this.DialogResult = DialogResult.OK;
             product.Count = int.Parse(this.AmountLabel.Text);
             product.Price = price;
+            product.Name += " " + type;
 
             Bucket.Products.Add(product);
             this.Close();
@@ -62,16 +64,19 @@ namespace WSB_Restaurant
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
             decimal.TryParse(label3.Text, out this.price);
+            type = "small";
         }
 
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
             decimal.TryParse(label4.Text, out this.price);
+            type = "medium";
         }
 
         private void RadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             decimal.TryParse(label5.Text, out this.price);
+            type = "large";
         }
     }
 }

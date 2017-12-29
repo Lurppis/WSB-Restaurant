@@ -53,7 +53,7 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        public System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
     }
 }
 

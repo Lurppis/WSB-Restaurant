@@ -15,6 +15,7 @@ namespace WSB_Restaurant
         {
             InitializeComponent();
             this.product = (Product)product;
+            this.label1.Text = this.product.Name;
         }
 
         private void BtnUp_Click(object sender, EventArgs e)
