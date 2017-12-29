@@ -47,6 +47,14 @@ private void bntUp_Click(object sender, System.EventArgs e)
  ```
  
  > Starting up server and begin accept callback asynchronously:
+ 
+ ``` C#
+ private static Socket _serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+ 
+ _serverSocket.Bind(new IPEndPoint(IPAddress.Any, 100));
+ _serverSocket.Listen(10);
+ _serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
+```
 
 ## Installation
 
