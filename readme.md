@@ -5,11 +5,18 @@
 > Hello, this is my school project, Mc Donald order clone. Restaurant has their own priority, car client should be placed at the top of stack, rest of clients to the end of queue. Application should use .Net, threading, random function and simple I/O.
 
 
-> App window has no access to minimize or exit app.
+> Client app window has no access to minimize or exit app.
 
 ![zrzut ekranu 2017-12-21 o 12 05 59](https://user-images.githubusercontent.com/5795126/34287793-bf4736d6-e6e9-11e7-9a27-fa0f6741ac3d.png)
 
+> Server app window display all orders in flow layout panel, blue sky color represent local customers and green one represent drive through clients which have higher priority.
+
+![zrzut ekranu 2017-12-29 o 09 46 12](https://user-images.githubusercontent.com/5795126/34433112-2effc48c-ec7d-11e7-9080-85d176ef89c0.png)
+
+
+
 ## Code Samples
+> Client side.
 
 > Change window content code snipit:
 
@@ -31,6 +38,15 @@ private void bntUp_Click(object sender, System.EventArgs e)
     this.AmountLabel.Text = number.ToString();
 }
  ```
+ 
+ > Server side.
+ 
+ > Convert Json to object:
+ ``` C#
+ public static Order FromJson(string json) => JsonConvert.DeserializeObject<Order>(json, Converter.Settings);
+ ```
+ 
+ > Starting up server and begin accept callback asynchronously:
 
 ## Installation
 
