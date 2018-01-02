@@ -11,7 +11,7 @@ namespace Server
 {
     public partial class Form1 : Form
     {
-        private List<Order> ListOfOrders = new List<Order>();
+        public static List<Order> ListOfOrders = new List<Order>();
 
         private static byte[] _buffer = new byte[1024];
         private static List<Socket> _clientSockets = new List<Socket>();
@@ -92,6 +92,11 @@ namespace Server
         {
             Socket socket = (Socket)ar.AsyncState;
             socket.EndSend(ar);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
