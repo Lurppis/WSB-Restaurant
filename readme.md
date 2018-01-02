@@ -1,5 +1,13 @@
 # WSB Restaurant
 
+# AGENDA
+## Table of Contents
+- [Introduction](#introduction)
+- [Code samples](#code-samples)
+- [Instalation](#installation)
+- [Testing](#testing)
+
+
 ## Introduction
 
 > Hello, this is my school project, Mc Donald order clone. Restaurant has their own priority, car client should be placed at the top of stack, rest of clients to the end of queue. Application should use .Net, threading, random function and simple I/O.
@@ -16,7 +24,7 @@
 
 
 ## Code Samples
-> Client side.
+### Client side.
 
 > Change window content code snipit:
 
@@ -39,7 +47,7 @@ private void bntUp_Click(object sender, System.EventArgs e)
 }
  ```
  
- > Server side.
+###  Server side.
  
  > Convert Json to object:
  ``` C#
