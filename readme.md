@@ -56,6 +56,31 @@ private void bntUp_Click(object sender, System.EventArgs e)
  _serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
 ```
 
+> Before exiting application, save all orders to json file:
+ 
+ ``` C#
+ Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
+ ```
+ ``` C#
+ private static void Application_ApplicationExit(object sender, EventArgs e)
+ {
+    var date = DateTime.UtcNow.ToString(@"MM_dd_yyyy");
+    try
+    {
+        File.WriteAllText(string.Format("C:\\Users\\marci\\Documents\\Project\\All_Saves\\{0}.json", date),JsonConvert.SerializeObject(Form1.ListOfOrders));
+    }
+    catch (Exception ex)
+    {
+        File.WriteAllText(string.Format("C:\\Users\\marci\\Documents\\Project\\All_Saves\\Logs\\Log_{0}", date), ex.ToString());
+    }
+ }
+```
+
 ## Installation
 
 > Not ready yet.
+
+## Testing
+
+> Not ready yet.
+>Will be added in the nearest future.
