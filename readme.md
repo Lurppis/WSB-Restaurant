@@ -1,6 +1,6 @@
 # WSB Restaurant
 
-# AGENDA
+## AGENDA
 ## Table of Contents
 - [Introduction](#introduction)
 - [Code samples](#code-samples)
