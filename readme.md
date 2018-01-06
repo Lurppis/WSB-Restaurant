@@ -92,3 +92,7 @@ private void bntUp_Click(object sender, System.EventArgs e)
 
 > Not ready yet.
 >Will be added in the nearest future.
+
+## Todo
+> Manager Panel
+App should fetch json from all_saves and present summary daily report.
