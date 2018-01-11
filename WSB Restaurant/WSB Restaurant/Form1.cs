@@ -1,19 +1,33 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.ComponentModel;
-using System.Drawing;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Windows.Forms;
-using WSB_Restaurant.Model;
-
-namespace WSB_Restaurant
+﻿namespace WSB_Restaurant
 {
+    using Newtonsoft.Json;
+    using System;
+    using System.ComponentModel;
+    using System.Drawing;
+    using System.Net;
+    using System.Net.Sockets;
+    using System.Text;
+    using System.Windows.Forms;
+    using WSB_Restaurant.Model;
+
+    /// <summary>
+    /// Defines the <see cref="Form1" />
+    /// </summary>
     public partial class Form1 : Form
     {
-        Bucket bucket = new Bucket();
+        /// <summary>
+        /// Defines the bucket
+        /// </summary>
+        public Bucket bucket = new Bucket();
+
+        /// <summary>
+        /// Defines the _clientSocket
+        /// </summary>
         private static Socket _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Form1"/> class.
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +35,11 @@ namespace WSB_Restaurant
             honeUserControl1.BringToFront();
         }
 
+        /// <summary>
+        /// The BntHome_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BntHome_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = bntHome.Location;
@@ -33,6 +52,11 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
+        /// <summary>
+        /// The BtnBoxes_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnBoxes_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnBoxes.Location;
@@ -45,6 +69,11 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
+        /// <summary>
+        /// The BtnBurgers_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnBurgers_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnBurgers.Location;
@@ -57,6 +86,11 @@ namespace WSB_Restaurant
             burgerUserControl1.Show();
         }
 
+        /// <summary>
+        /// The BtnFries_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnFries_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnFries.Location;
@@ -69,6 +103,11 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
+        /// <summary>
+        /// The BtnDrinks_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnDrinks_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnDrinks.Location;
@@ -81,6 +120,11 @@ namespace WSB_Restaurant
             burgerUserControl1.Hide();
         }
 
+        /// <summary>
+        /// The BtnIceCreams_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnIceCreams_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnIceCreams.Location;
@@ -93,6 +137,11 @@ namespace WSB_Restaurant
             iceCreamUserControl1.BringToFront();
         }
 
+        /// <summary>
+        /// The BtnPayment_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void BtnPayment_Click(object sender, System.EventArgs e)
         {
             SidePanel.Location = btnPayment.Location;
@@ -116,6 +165,11 @@ namespace WSB_Restaurant
             dataGridView1.DataSource = source;
         }
 
+        /// <summary>
+        /// The Button2_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void Button2_Click(object sender, System.EventArgs e)
         {
             Bucket.Products.Clear();
@@ -124,6 +178,11 @@ namespace WSB_Restaurant
             dataGridView1.DataSource = source;
         }
 
+        /// <summary>
+        /// The Button3_Click
+        /// </summary>
+        /// <param name="sender">The <see cref="object"/></param>
+        /// <param name="e">The <see cref="System.EventArgs"/></param>
         private void Button3_Click(object sender, System.EventArgs e)
         {
             int attempts = 0;
@@ -138,7 +197,7 @@ namespace WSB_Restaurant
                 {
                     Console.WriteLine(attempts);
                 }
-                catch(Exception exception)
+                catch (Exception exception)
                 {
                     MessageBox.Show(exception.ToString());
                 }
@@ -147,6 +206,9 @@ namespace WSB_Restaurant
             Send();
         }
 
+        /// <summary>
+        /// The Send
+        /// </summary>
         private void Send()
         {
             var result = JsonConvert.SerializeObject(new

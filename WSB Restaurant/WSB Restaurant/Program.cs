@@ -1,20 +1,22 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace WSB_Restaurant
+﻿namespace WSB_Restaurant
 {
-    static class Program
+    using System;
+    using System.Windows.Forms;
+
+    /// <summary>
+    /// Defines the <see cref="Program" />
+    /// </summary>
+    public static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ClientType());
-
         }
     }
 }
