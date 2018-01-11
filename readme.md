@@ -1,5 +1,13 @@
 # WSB Restaurant
 
+## AGENDA
+## Table of Contents
+- [Introduction](#introduction)
+- [Code samples](#code-samples)
+- [Instalation](#installation)
+- [Testing](#testing)
+
+
 ## Introduction
 
 > Hello, this is my school project, Mc Donald order clone. Restaurant has their own priority, car client should be placed at the top of stack, rest of clients to the end of queue. Application should use .Net, threading, random function and simple I/O.
@@ -16,7 +24,7 @@
 
 
 ## Code Samples
-> Client side.
+### Client side.
 
 > Change window content code snipit:
 
@@ -39,7 +47,7 @@ private void bntUp_Click(object sender, System.EventArgs e)
 }
  ```
  
- > Server side.
+###  Server side.
  
  > Convert Json to object:
  ``` C#
@@ -56,6 +64,35 @@ private void bntUp_Click(object sender, System.EventArgs e)
  _serverSocket.BeginAccept(new AsyncCallback(AcceptCallback), null);
 ```
 
+> Before exiting application, save all orders to json file:
+ 
+ ``` C#
+ Application.ApplicationExit += new EventHandler(Application_ApplicationExit);
+ ```
+ ``` C#
+ private static void Application_ApplicationExit(object sender, EventArgs e)
+ {
+    var date = DateTime.UtcNow.ToString(@"MM_dd_yyyy");
+    try
+    {
+        File.WriteAllText(string.Format("C:\\Users\\marci\\Documents\\Project\\All_Saves\\{0}.json", date),JsonConvert.SerializeObject(Form1.ListOfOrders));
+    }
+    catch (Exception ex)
+    {
+        File.WriteAllText(string.Format("C:\\Users\\marci\\Documents\\Project\\All_Saves\\Logs\\Log_{0}", date), ex.ToString());
+    }
+ }
+```
+
 ## Installation
 
 > Not ready yet.
+
+## Testing
+
+> Not ready yet.
+>Will be added in the nearest future.
+
+## Todo
+> Manager Panel
+App should fetch json from all_saves and present summary daily report.
